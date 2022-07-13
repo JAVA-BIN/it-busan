@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+
+---
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    url: jdbc:mysql://meokeobolre-database.c05undil1cul.ap-northeast-2.rds.amazonaws.com:3306/product
+    username: dev
+    password: j!!r!uQs#7Ke5q
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # 운영시에는 validate 로 변경
+    show-sql: true # SQL 로그

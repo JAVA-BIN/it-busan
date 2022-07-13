@@ -50,6 +50,12 @@ public class UserController {
         return "signin";
     }
 
+    @PostMapping("/auth")
+    public String userAuthorization(UserVo userVo) {
+        userService.userAuthorization(userVo);
+        return "index";
+    }
+
     @PostMapping("/login")
     public ResponseEntity<String> login(String id, String password, String rememberMe, HttpSession session, HttpServletResponse response) {
         int check = userService.userCheck(id, password);

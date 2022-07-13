@@ -68,13 +68,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void userUpdate(UserVo userVo) {
         User user = userRepo.findById(userVo.getId());
-
-        user.setId(userVo.getId());
         user.setName(userVo.getName());
         user.setPassword(userVo.getPassword());
         user.setEmail(userVo.getEmail());
         user.setAuthority(UserAuthCode.MEMBER.getValue());
-        user.setCreatedDate(new Date());
         user.setModifiedDate(new Date());
         userRepo.save(user);
     }
@@ -102,8 +99,18 @@ public class UserServiceImpl implements UserService {
         return check;
     }
 
-    private void userAuthorization() {
-        //TODO 권한부여
+    @Override
+    public void userAuthorization(UserVo userVo) {
+        User user = userRepo.findById(userVo.getId());
+        if (UserAuthCode.MANAGER.getValue().equals(userVo.getAuthority())) {
+            user.setAuthority(UserAuthCode.MANAGER.getValue());
+        } else if (UserAuthCode.ADMIN.getValue().equals(userVo.getAuthority())) {
+            user.setAuthority(UserAuthCode.ADMIN.getValue());
+        } else {
+            user.setAuthority(UserAuthCode.MEMBER.getValue());
+        }
+        user.setModifiedDate(new Date());
+        userRepo.save(user);
     }
 
 }

@@ -26,4 +26,9 @@ public class CommonController {
         return "sign/signup";
     }
 
+
+    @GetMapping("/board/write")
+    public String write() {
+        return "board/write";
+    }
 }

@@ -14,5 +14,6 @@ public interface UserService {
     void userUpdate(UserVo userVo);
     void userDelete(String userId);
     int userCheck(String userId, String password);
+    void userAuthorization(UserVo userVo);
 
 }

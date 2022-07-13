@@ -1,6 +1,6 @@
 package tk.meokeobolre.user.service;
 
-import beans.americano.user.model.UserVo;
+import tk.meokeobolre.user.model.UserVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

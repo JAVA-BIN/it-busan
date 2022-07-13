@@ -11,19 +11,19 @@ public class CommonController {
     @GetMapping("/")
     public String main(HttpSession httpSession) {
         if (httpSession.getAttribute("id") == null) {
-            return "login";
+            return "index";
         }
-        return "board/dashboard";
+        return "board/list";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/signin")
     public String signin() {
-        return "/login";
+        return "sign/signin";
     }
 
     @GetMapping("/signup")
     public String signup() {
-        return "user/signup";
+        return "sign/signup";
     }
 
 }

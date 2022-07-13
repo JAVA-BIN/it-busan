@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="product@meokeobolre-database.c05undil1cul.ap-northeast-2.rds.amazonaws.com" uuid="57d0c905-7159-49d9-b052-a15eee5c0129">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://meokeobolre-database.c05undil1cul.ap-northeast-2.rds.amazonaws.com:3306/product</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="board_test@meokeobolre-database.c05undil1cul.ap-northeast-2.rds.amazonaws.com" uuid="e1bf44ea-4c51-4852-82ea-710b4e506f9f">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://meokeobolre-database.c05undil1cul.ap-northeast-2.rds.amazonaws.com:3306/board_test</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

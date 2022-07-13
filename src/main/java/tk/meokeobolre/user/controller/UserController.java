@@ -1,7 +1,7 @@
 package tk.meokeobolre.user.controller;
 
-import beans.americano.user.model.UserVo;
-import beans.americano.user.service.UserService;
+import tk.meokeobolre.user.model.UserVo;
+import tk.meokeobolre.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping("/create")
     public String userCreate(UserVo userVo) {
         userService.userCreate(userVo);
-        return "signin";
+        return "index";
     }
 
     @PutMapping("/update")

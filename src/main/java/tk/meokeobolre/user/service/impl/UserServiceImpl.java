@@ -1,10 +1,10 @@
 package tk.meokeobolre.user.service.impl;
 
-import beans.americano.user.entity.User;
-import beans.americano.user.model.UserVo;
-import beans.americano.user.repository.UserRepository;
-import beans.americano.user.service.UserService;
-import beans.americano.user.util.UserAuthCode;
+import tk.meokeobolre.user.entity.User;
+import tk.meokeobolre.user.model.UserVo;
+import tk.meokeobolre.user.repository.UserRepository;
+import tk.meokeobolre.user.service.UserService;
+import tk.meokeobolre.user.util.UserAuthCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

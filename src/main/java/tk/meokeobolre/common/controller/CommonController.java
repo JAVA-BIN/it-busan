@@ -13,7 +13,7 @@ public class CommonController {
         if (httpSession.getAttribute("id") == null) {
             return "index";
         }
-        return "board/list";
+        return "redirect:/board/list";
     }
 
     @GetMapping("/signin")

@@ -10,27 +10,16 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <div class="overlay-right">
-            <div>
-                <h1>Welcome Back</h1>
-                <p>To keep connected with us please login with your personal info</p>
-                <button id="signIn" onclick="location.href='/signin'">Sign In</button>
-            </div>
-        </div>
+    <div class="overlay-container">
+    <div class="overlay-right">
+        <h1>Welcome Back</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button id="signIn" onclick="location.href='/signin'">Sign In</button>
+    </div>
+    </div>
         <div class="sign-in-container">
             <form name="signup" id="userVo" action="/user/create" method="post">
                 <h1>Create Account</h1>
-                <div class="social-links">
-                    <div>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
                 <span>or use your email for registration</span>
                 <input type="text" name="id" placeholder="ID">
                 <input type="text" name="name" placeholder="Name">

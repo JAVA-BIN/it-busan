@@ -20,18 +20,7 @@
         <div class="sign-in-container">
             <form name="signin" id="userVo" action="/user/login" method="post">
                 <h1>Sign In</h1>
-                <div class="social-links">
-                    <div>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                    </div>
-                    <div>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <span>or use your account</span>
+                <br>
                 <input type="id" name="id" placeholder="ID">
                 <input type="password" name="password" placeholder="Password">
                 <button class="form_btn">Sign In</button>

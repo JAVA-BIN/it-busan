@@ -20,7 +20,7 @@
         <div class="sign-in-container">
             <form name="signup" id="userVo" action="/user/create" method="post">
                 <h1>Create Account</h1>
-                <span>or use your email for registration</span>
+                <br>
                 <input type="text" name="id" placeholder="ID">
                 <input type="text" name="name" placeholder="Name">
                 <input type="email" name="email" placeholder="Email">

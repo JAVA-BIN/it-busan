@@ -21,7 +21,7 @@
             <form name="signup" id="userVo" action="/user/create" method="post">
                 <h1>Create Account</h1>
                 <br>
-                <input type="text" name="id" placeholder="ID">
+                <input type="text" name="userid" placeholder="ID">
                 <input type="text" name="name" placeholder="Name">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">

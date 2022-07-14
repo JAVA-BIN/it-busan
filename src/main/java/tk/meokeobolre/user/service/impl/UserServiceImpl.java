@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
         List<User> users =  userRepo.findAll();
         for (User user : users) {
             UserVo userVo = new UserVo();
-            userVo.setId(user.getId());
+            userVo.setUserid(user.getUserid());
             userVo.setName(user.getName());
             userVo.setPassword(user.getPassword());
             userVo.setEmail(user.getEmail());
@@ -40,9 +40,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserVo userDetail(String userId) {
-        User user = userRepo.findById(userId);
+        User user = userRepo.findByUserid(userId);
         UserVo userVo = new UserVo();
-        userVo.setId(user.getId());
+        userVo.setUserid(user.getUserid());
         userVo.setName(user.getName());
         userVo.setPassword(user.getPassword());
         userVo.setEmail(user.getEmail());
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void userCreate(UserVo userVo) {
         User user = new User();
-        user.setId(userVo.getId());
+        user.setUserid(userVo.getUserid());
         user.setName(userVo.getName());
         user.setPassword(userVo.getPassword());
         user.setEmail(userVo.getEmail());
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void userUpdate(UserVo userVo) {
-        User user = userRepo.findById(userVo.getId());
+        User user = userRepo.findByUserid(userVo.getUserid());
         user.setName(userVo.getName());
         user.setPassword(userVo.getPassword());
         user.setEmail(userVo.getEmail());
@@ -79,14 +79,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public void userDelete(String userId) {
         if (userId != null) {
-            userRepo.delete(userRepo.findById(userId));
+            userRepo.delete(userRepo.findByUserid(userId));
         }
     }
 
     @Override
     public int userCheck(String userId, String password) {
         int check = -1;
-        User user = userRepo.findById(userId);
+        User user = userRepo.findByUserid(userId);
         if (user != null) {
             if (password.equals(user.getPassword())) {
                 check = 1;
@@ -101,7 +101,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void userAuthorization(UserVo userVo) {
-        User user = userRepo.findById(userVo.getId());
+        User user = userRepo.findByUserid(userVo.getUserid());
         if (UserAuthCode.MANAGER.getValue().equals(userVo.getAuthority())) {
             user.setAuthority(UserAuthCode.MANAGER.getValue());
         } else if (UserAuthCode.ADMIN.getValue().equals(userVo.getAuthority())) {

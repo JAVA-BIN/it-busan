@@ -57,8 +57,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(String id, String password, String rememberMe, HttpSession session, HttpServletResponse response) {
-        int check = userService.userCheck(id, password);
+    public ResponseEntity<String> login(String userid, String password, String rememberMe, HttpSession session, HttpServletResponse response) {
+        int check = userService.userCheck(userid, password);
         if (check != 1) { // 로그인 실패일 때
             String message = "";
             if (check == 0) {
@@ -76,11 +76,11 @@ public class UserController {
             return new ResponseEntity<String>(sb.toString(), headers, HttpStatus.OK);
         } // 로그인 실패
         // 로그인 성공
-        session.setAttribute("id", id);
+        session.setAttribute("id", userid);
         // 로그인 상태유지 여부확인 후
         // 쿠키생성 응답시 보내기
         if (rememberMe != null && rememberMe.equals("true")) {
-            Cookie cookie = new Cookie("id", id);
+            Cookie cookie = new Cookie("id", userid);
             cookie.setMaxAge(60 * 10); // 초단위 // 10분 = 600초
             cookie.setPath("/"); // 쿠키경로 설정
             response.addCookie(cookie); // 응답객체에 추가

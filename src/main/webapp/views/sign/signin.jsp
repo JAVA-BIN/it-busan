@@ -21,7 +21,7 @@
             <form name="signin" id="userVo" action="/user/login" method="post">
                 <h1>Sign In</h1>
                 <br>
-                <input type="id" name="id" placeholder="ID">
+                <input type="id" name="userid" placeholder="ID">
                 <input type="password" name="password" placeholder="Password">
                 <button class="form_btn">Sign In</button>
             </form>
